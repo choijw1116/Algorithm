@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>홀수</title>
+    <p>
+      서울시는 6월 1일부터 교통 혼잡을 막기 위해서 자동차 10부제를 시행한다.
+      자동차 10부제는 자동차 번호의 일의 자리 숫자와 날짜의 일의 자리 숫자가
+      일치하면 해당 자동차의 운행을 금 지하는 것이다. 예를 들어, 자동차 번호의
+      일의 자리 숫자가 7이면 7일, 17일, 27일에 운행하 지 못한다. 또한, 자동차
+      번호의 일의 자리 숫자가 0이면 10일, 20일, 30일에 운행하지 못한 다.<br />
+      여러분들은 일일 경찰관이 되어 10부제를 위반하는 자동차의 대수를 세는
+      봉사활동을 하려고 한다. 날짜의 일의 자리 숫자가 주어지고 7대의 자동차
+      번호의 끝 두 자리 수가 주어졌을 때 위반하는 자동차의 대수를 출력하는
+      프로그램을 작성하세요.
+    </p>
+    <ul>
+      <li>▣ 입력설명</li>
+      첫 줄에는 날짜의 일의 자리 숫자가 주어지고 두 번째 줄에는 7대의 자동차
+      번호의 끝 두 자 리 숫자가 주어진다.
+    </ul>
+    <ul>
+      <li>▣ 출력설명</li>
+      주어진 날짜와 자동차의 일의 자리 숫자를 보고 10부제를 위반하는 차량의
+      대수를 출력합니 다.
+    </ul>
+    <ul>
+      <li>▣ 입력예제 1</li>
+      3
+      <br />[25 23 11 47 53 17 33]
+    </ul>
+    <ul>
+      <li>▣ 출력예제 1</li>
+      3
+    </ul>
+    <ul>
+      <li>▣ 입력예제 2</li>
+      0<br />[12 20 54 30 87 91 30]
+    </ul>
+    <ul>
+      <li>▣ 출력예제 2</li>
+      3
+    </ul>
+  </head>
+  <body>
+    <script>
+      //내가푼풀이
+      //1. arr[i]의 1의 자리수를 구한다
+      //   for of로 까고 난 후에 숫자를 문자열로 변경 후 짜른다
+      //2. day와 arr[i]의 1의 자리수를 비교한다
+      //3, 둘이 같으면 answer[]에 push
+      //4. answer.length를 return
+      function solution(day, arr) {
+        let answer = [];
+        for (const value of arr) {
+          let str = String(value);
+          day !== Number(str[str.length - 1]) ? null : answer.push(value); // --> 5 일의 자리 (숫자 number)
+        }
+        console.log(answer);
+        return answer.length;
+      }
+      arr = [25, 23, 11, 47, 53, 17, 33];
+      console.log(solution(3, arr));
+    </script>
+    <script>
+      //해설
+      function solution(day, arr) {
+        let answer = 0;
+        for (let x of arr) {
+          if (x % 10 == day) answer++;
+        }
+
+        return answer;
+      }
+
+      arr = [25, 23, 11, 47, 53, 17, 33];
+      console.log(solution(3, arr));
+    </script>
+  </body>
+</html>

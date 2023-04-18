@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+    <p>
+      자연수 N이 입력되면 1부터 N까지의 합을 출력하는 프로그램을 작성하세요.
+    </p>
+    <ul>
+      <li>▣ 입력설명</li>
+      첫 번째 줄에 20이하의 자연수 N이 입력된다..
+    </ul>
+    <ul>
+      <li>▣ 출력설명</li>
+      첫 번째 줄에 1부터 N까지의 합을 출력한다.
+    </ul>
+    <ul>
+      <li>▣ 입력예제 1</li>
+      6
+    </ul>
+    <ul>
+      <li>▣ 출력예제 1</li>
+      21
+    </ul>
+    <ul>
+      <li>▣ 입력예제 2</li>
+      10
+    </ul>
+    <ul>
+      <li>▣ 출력예제 2</li>
+      55
+    </ul>
+  </head>
+  <body>
+    <script>
+      //내가 푼 풀이
+      function solution(n) {
+        let answer = 0;
+        for (let i = 1; i <= n; i++) {
+          answer = answer + i;
+          console.log(answer);
+        }
+        return answer;
+      }
+      console.log(solution(6));
+    </script>
+    <script>
+      //해설
+      function solution(n) {
+        let answer = 0;
+        for (let i = 1; i <= n; i++) {
+          answer = answer + i;
+        }
+
+        return answer;
+      }
+
+      console.log(solution(10));
+    </script>
+  </body>
+</html>
