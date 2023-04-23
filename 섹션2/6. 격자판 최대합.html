@@ -51,12 +51,14 @@
         let sum1 = (sum2 = 0);
         for (let i = 0; i < n; i++) {
           //행합 열합 비교
+          sum1 = sum2 = 0;
           for (let j = 0; j < n; j++) {
             sum1 += arr[i][j];
             sum2 += arr[j][i];
           }
           answer = Math.max(answer, sum1, sum2);
         }
+        sum1 = sum2 = 0; //초기화를 시켜줘야함!!!
         for (let i = 0; i < n; i++) {
           //대각선 합비교
           sum1 += arr[i][i];
