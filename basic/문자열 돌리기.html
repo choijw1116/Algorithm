@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>문자열 돌리기</title>
+    <p>
+      문자열 str이 주어집니다. 문자열을 시계방향으로 90도 돌려서 아래 입출력
+      예와 같이 출력하는 코드를 작성해 보세요.
+    </p>
+    <span>제한사항</span>
+    <p>1 ≤ str의 길이 ≤ 10</p>
+    <ul>
+      <li>▣ 출력예시</li>
+      <li>!@#$%^&*(\'"<>?:;</li>
+      <li></li>
+    </ul>
+    <ul>
+      <li>▣ 입력예제 1</li>
+      abcde
+      <br />
+    </ul>
+    <ul>
+      <li>▣ 출력예제 1</li>
+      a<br />
+      b<br />
+      c<br />
+      d<br />
+      e<br />
+    </ul>
+    <ul>
+      <li>▣ 입력예제 2</li>
+    </ul>
+    <ul>
+      <li>▣ 출력예제 2</li>
+    </ul>
+  </head>
+  <body>
+    <script>
+      import java.util.Scanner;
+
+      public class Solution {
+          public static void main(String[] args) {
+              Scanner sc = new Scanner(System.in);
+              String a = sc.next();
+              String[] result = a.split("");
+
+              for(int i=0; i<result.length; i++){
+                  System.out.println(result[i]);
+              }
+          }
+      }
+    </script>
+  </body>
+</html>
