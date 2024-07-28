@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>홀짝 구분하기</title>
+    <p>
+      자연수 n이 입력으로 주어졌을 때 만약 n이 짝수이면 "n is even"을, 홀수이면
+      "n is odd"를 출력하는 코드를 작성해 보세요.
+    </p>
+    <span>제한사항</span>
+    <p>1 ≤ n ≤ 1,000</p>
+    <ul>
+      <li>▣ 출력예시</li>
+      <li></li>
+    </ul>
+    <ul>
+      <li>▣ 입력예제 1</li>
+      100
+      <br />
+    </ul>
+    <ul>
+      <li>▣ 출력예제 1</li>
+      100 is even
+    </ul>
+    <ul>
+      <li>▣ 입력예제 2</li>
+      1
+    </ul>
+    <ul>
+      <li>▣ 출력예제 2</li>
+      1 is odd
+    </ul>
+  </head>
+  <body>
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        /*
+        even = %2 == 0
+        odd = %2 != 0
+        */
+        
+        if(n%2 == 0){
+            System.out.println(n + " is even");
+        }else if(n%2 != 0){
+            System.out.println(n + " is odd");
+        }
+    }
+}
+    </script>
+  </body>
+</html>
