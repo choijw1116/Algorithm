@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>문자열 겹쳐쓰기</title>
+  <p>
+    문자열 my_string, overwrite_string과 정수 s가 주어집니다. 문자열 my_string의 인덱스 s부터 overwrite_string의 길이만큼을 문자열 overwrite_string으로
+    바꾼 문자열을 return 하는 solution 함수를 작성해 주세요.
+  </p>
+  <span>제한사항</span>
+  <p>my_string와 overwrite_string은 숫자와 알파벳으로 이루어져 있습니다.
+    1 ≤ overwrite_string의 길이 ≤ my_string의 길이 ≤ 1,000
+    0 ≤ s ≤ my_string의 길이 - overwrite_string의 길이</p>
+  <ul>
+    <li>▣ 출력예시</li>
+    <li></li>
+  </ul>
+  <ul>
+    <li>▣ 입력예제 1</li>
+    100
+    <br />
+  </ul>
+  <ul>
+    <li>▣ 출력예제 1</li>
+    100 is even
+  </ul>
+  <ul>
+    <li>▣ 입력예제 2</li>
+    1
+  </ul>
+  <ul>
+    <li>▣ 출력예제 2</li>
+    1 is odd
+  </ul>
+</head>
+
+<body>
+  class Solution {
+  public String solution(String my_string, String overwrite_string, int s) {
+  String answer = "";
+  int my = my_string.length();
+  int over = overwrite_string.length();
+
+  answer = my_string.substring(0,s)+overwrite_string+ my_string.substring(s+over,my);
+  return answer;
+  }
+  }
+  </script>
+</body>
+
+</html>
