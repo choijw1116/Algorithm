@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>문자열 섞기</title>
+
+  <p>
+    길이가 같은 두 문자열 str1과 str2가 주어집니다.
+
+    두 문자열의 각 문자가 앞에서부터 서로 번갈아가면서 한 번씩 등장하는 문자열을 만들어 return 하는 solution 함수를 완성해 주세요.
+  </p>
+  <span>제한사항</span>
+  <p>
+    1 ≤ str1의 길이 = str2의 길이 ≤ 10
+    str1과 str2는 알파벳 소문자로 이루어진 문자열입니다.
+  </p>
+  <ul>
+    <li>▣ 입력설명</li>
+  </ul>
+  <ul>
+    <li>▣ 출력설명</li>
+  </ul>
+  <ul>
+    <li>▣ 입력예제 1</li>
+    "aaaaa"
+  </ul>
+  <ul>
+    <li>▣ 출력예제 1</li>
+    "bbbbb"
+  </ul>
+  <ul>
+    <li>▣ result</li>
+    "abababababab"
+  </ul>
+  <ul>
+    <li>▣ 입력예제 2</li>
+    Hello World!
+  </ul>
+  <ul>
+    <li>▣ 출력예제 2</li>
+    HelloWorld!
+  </ul>
+</head>
+
+<body>
+  <script>
+    class Solution {
+      public String solution(String str1, String str2) {
+        String answer = "";
+        String[] new1 = str1.split("");
+        String[] new2 = str2.split("");
+
+        for (int i = 0; i < str1.length(); i++) {
+          answer = answer + new1[i] + new2[i];
+
+        }
+        return answer;
+      }
+    }
+  </script>
+  <script></script>
+</body>
+
+</html>
